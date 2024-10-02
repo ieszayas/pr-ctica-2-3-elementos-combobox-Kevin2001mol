@@ -25,14 +25,14 @@ public class Ventana_1 extends javax.swing.JFrame {
         modulos_dam2.add("Servicios y Procesos");
         modulos_dam2.add("Interfaces");
         modulos_dam2.add("Android");
-        //Ventana_1.setDefaultLookAndFeelDecorated(rootPaneCheckingEnabled);
+
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        Panel_principal = new javax.swing.JPanel();
         lista_añadidos = new javax.swing.JComboBox<>();
         label_texto_principal = new javax.swing.JLabel();
         boton_añadir_modulo = new javax.swing.JButton();
@@ -95,47 +95,47 @@ public class Ventana_1 extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout Panel_principalLayout = new javax.swing.GroupLayout(Panel_principal);
+        Panel_principal.setLayout(Panel_principalLayout);
+        Panel_principalLayout.setHorizontalGroup(
+            Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_principalLayout.createSequentialGroup()
                 .addComponent(escribir_modulos, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lista_añadidos, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(Panel_principalLayout.createSequentialGroup()
+                .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_principalLayout.createSequentialGroup()
+                        .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Panel_principalLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(label_texto_principal, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(combobox_curso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(Panel_principalLayout.createSequentialGroup()
                                 .addGap(40, 40, 40)
                                 .addComponent(boton_añadir_modulo))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(Panel_principalLayout.createSequentialGroup()
                                 .addGap(25, 25, 25)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(boton_eliminar_todo)
                                     .addComponent(boton_agregar_todo))))
                         .addGap(0, 39, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_principalLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(boton_borrar_seleccion)))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        Panel_principalLayout.setVerticalGroup(
+            Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_principalLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_texto_principal)
                     .addComponent(combobox_curso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lista_añadidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(escribir_modulos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -155,18 +155,19 @@ public class Ventana_1 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Panel_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Panel_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void escribir_modulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_escribir_modulosActionPerformed
@@ -189,7 +190,7 @@ public class Ventana_1 extends javax.swing.JFrame {
                 for (int i = 0; i < lista_añadidos.getItemCount(); i++) {
                     for (int j = 0; j < lista_añadidos.getItemCount(); j++) {
                         if (lista_añadidos.getItemAt(i).equalsIgnoreCase(modulos_dam1.get(j))) {
-                            contador++; //si encuentra un modulo en el comoboc que se llame igual en modulos_dam1 se suma al contador,
+                            contador++; //si encuentra un modulo en el comoboc que se llame igual en modulos_dam1 se suma al contador.
                         }
                     }
                 }
@@ -201,7 +202,7 @@ public class Ventana_1 extends javax.swing.JFrame {
             } else {
 
                 for (int i = 0; i < lista_añadidos.getItemCount(); i++) {
-                    if (lista_añadidos.getItemAt(i).equals(escribir_modulos.getText())) {
+                    if (lista_añadidos.getItemAt(i).equalsIgnoreCase(escribir_modulos.getText())) {
                         JOptionPane.showMessageDialog(null, "El modulo " + escribir_modulos.getText() + " ya esta introducido.");
                         escribir_modulos.setText("");
                         return;
@@ -224,12 +225,8 @@ public class Ventana_1 extends javax.swing.JFrame {
                 }
             } else {
 
-                for (int i = 0; i < lista_añadidos.getItemCount(); i++) {
-                    if (lista_añadidos.getItemAt(i).equals(escribir_modulos.getText())) {
-                        JOptionPane.showMessageDialog(null, "El modulo " + escribir_modulos.getText() + " ya esta introducido.");
-                        escribir_modulos.setText("");
-                        return;
-                    }
+                if (!(existe())) {
+                    return;
                 }
             }
 
@@ -237,35 +234,47 @@ public class Ventana_1 extends javax.swing.JFrame {
 
         lista_añadidos.addItem(escribir_modulos.getText());
         escribir_modulos.setText("");
-        // lista_añadidos.addItem(escribir_modulos.getText());//ENGANCHO EL TEXTO Y LO TENGO QUE AÑADIR AL COMBOBOX
+
 
     }//GEN-LAST:event_boton_añadir_moduloActionPerformed
 
-    private void boton_agregar_todoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_agregar_todoActionPerformed
-        if (combobox_curso.getSelectedItem().equals(dam1)) {
-            if (lista_añadidos.getItemCount() == 0) {
-                for (String modulo : modulos_dam1) {
-                    lista_añadidos.addItem(modulo);
-                }
-            } else {
-
-                JOptionPane.showMessageDialog(null, "Para acceder a esta opcion, elimina los modulos que has añadido previamente.");
-
+    public boolean existe() {
+        for (int i = 0; i < lista_añadidos.getItemCount(); i++) {
+            if (lista_añadidos.getItemAt(i).equalsIgnoreCase((escribir_modulos.getText()))) {
+                JOptionPane.showMessageDialog(null, "El modulo " + escribir_modulos.getText() + " ya esta introducido.");
+                escribir_modulos.setText("");
+                return false;
             }
         }
+
+        return true;
+    }
+
+
+    private void boton_agregar_todoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_agregar_todoActionPerformed
+        if (combobox_curso.getSelectedItem().equals(dam1)) {
+            crear_todo(modulos_dam1);
+
+        }
         if (combobox_curso.getSelectedItem().equals(dam2)) {
-            if (lista_añadidos.getItemCount() == 0) {
-                for (String modulo : modulos_dam2) {
-                    lista_añadidos.addItem(modulo);
-                }
-            } else {
-
-                JOptionPane.showMessageDialog(null, "Para acceder a esta opcion, elimina los modulos que has añadido previamente.");
-
-            }
+            crear_todo(modulos_dam2);
 
         }
     }//GEN-LAST:event_boton_agregar_todoActionPerformed
+    public void crear_todo(ArrayList<String> curso) {
+
+        if (lista_añadidos.getItemCount() == 0) {
+            for (String modulo : curso) {
+                lista_añadidos.addItem(modulo);
+            }
+        } else {
+
+            JOptionPane.showMessageDialog(null, "Para acceder a esta opcion, elimina los modulos que has añadido previamente.");
+
+        }
+
+    }
+
 
     private void boton_eliminar_todoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_eliminar_todoActionPerformed
         if (lista_añadidos.getItemCount() == 0) {
@@ -298,13 +307,13 @@ public class Ventana_1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Panel_principal;
     private javax.swing.JButton boton_agregar_todo;
     private javax.swing.JButton boton_añadir_modulo;
     private javax.swing.JButton boton_borrar_seleccion;
     private javax.swing.JButton boton_eliminar_todo;
     private javax.swing.JComboBox<String> combobox_curso;
     private javax.swing.JTextField escribir_modulos;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel label_texto_principal;
     private javax.swing.JComboBox<String> lista_añadidos;
     // End of variables declaration//GEN-END:variables
