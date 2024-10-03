@@ -12,19 +12,19 @@ public class Ventana_1 extends javax.swing.JFrame {
 
     public Ventana_1() {
         initComponents();
-        modulos_dam1.add("Entornos de Desarrollo");
-        modulos_dam1.add("Lenguaje de Marcas");
-        modulos_dam1.add("Programacion");
-        modulos_dam1.add("Base de Datos");
+        modulos_dam1.add("ENTORNOS DE DESARROLLO");
+        modulos_dam1.add("LENGUAJE DE MARCAS");
+        modulos_dam1.add("PROGRAMACION");
+        modulos_dam1.add("BASE DE DATOS");
         modulos_dam1.add("FOL");
-        modulos_dam1.add("Sistemas Informaticos");
+        modulos_dam1.add("SISTEMAS INFORMATICOS");
 
-        modulos_dam2.add("Empresa");
-        modulos_dam2.add("Acceso a Datos");
-        modulos_dam2.add("Ingles");
-        modulos_dam2.add("Servicios y Procesos");
-        modulos_dam2.add("Interfaces");
-        modulos_dam2.add("Android");
+        modulos_dam2.add("EMPRESA");
+        modulos_dam2.add("ACCESO A DATOS");
+        modulos_dam2.add("INGLES");
+        modulos_dam2.add("SERVICIOS Y PROCESOS");
+        modulos_dam2.add("INTERFACES");
+        modulos_dam2.add("ANDROID");
 
     }
 
@@ -88,7 +88,7 @@ public class Ventana_1 extends javax.swing.JFrame {
             }
         });
 
-        boton_borrar_seleccion.setText("borrar");
+        boton_borrar_seleccion.setText("Borrar");
         boton_borrar_seleccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton_borrar_seleccionActionPerformed(evt);
@@ -107,25 +107,22 @@ public class Ventana_1 extends javax.swing.JFrame {
             .addGroup(Panel_principalLayout.createSequentialGroup()
                 .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_principalLayout.createSequentialGroup()
-                        .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Panel_principalLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(label_texto_principal, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(combobox_curso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(Panel_principalLayout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addComponent(boton_añadir_modulo))
-                            .addGroup(Panel_principalLayout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(boton_eliminar_todo)
-                                    .addComponent(boton_agregar_todo))))
-                        .addGap(0, 39, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_principalLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(boton_borrar_seleccion)))
-                .addContainerGap())
+                        .addContainerGap()
+                        .addComponent(label_texto_principal, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(combobox_curso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_principalLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(boton_eliminar_todo)
+                            .addComponent(boton_agregar_todo))))
+                .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(Panel_principalLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(boton_añadir_modulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(boton_borrar_seleccion)
+                .addGap(101, 101, 101))
         );
         Panel_principalLayout.setVerticalGroup(
             Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,10 +136,10 @@ public class Ventana_1 extends javax.swing.JFrame {
                     .addComponent(lista_añadidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(escribir_modulos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(boton_añadir_modulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(boton_borrar_seleccion)
-                .addGap(48, 48, 48)
+                .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boton_añadir_modulo)
+                    .addComponent(boton_borrar_seleccion))
+                .addGap(77, 77, 77)
                 .addComponent(boton_agregar_todo)
                 .addGap(18, 18, 18)
                 .addComponent(boton_eliminar_todo)
@@ -179,77 +176,81 @@ public class Ventana_1 extends javax.swing.JFrame {
     }//GEN-LAST:event_lista_añadidosActionPerformed
 
     private void boton_añadir_moduloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_añadir_moduloActionPerformed
-        boolean estan_todos_ya = false;
-        int contador = 0;
-        if (escribir_modulos.getText().isEmpty()) {
+
+        if (escribir_modulos.getText().isEmpty()) { // si lo que va a añadir esta vacio se le manda un mensaje
             JOptionPane.showMessageDialog(null, "No has introducido ningun modulo.");
             return;
         }
-        if (combobox_curso.getSelectedItem().equals(dam1)) {
-            if (lista_añadidos.getItemCount() == modulos_dam1.size()) {
-                for (int i = 0; i < lista_añadidos.getItemCount(); i++) {
-                    for (int j = 0; j < lista_añadidos.getItemCount(); j++) {
-                        if (lista_añadidos.getItemAt(i).equalsIgnoreCase(modulos_dam1.get(j))) {
-                            contador++; //si encuentra un modulo en el comoboc que se llame igual en modulos_dam1 se suma al contador.
-                        }
-                    }
-                }
-                if (contador == lista_añadidos.getItemCount()) {//si el contador es igual que la longitud del combobox significa que ya estan todos los modulos
-                    JOptionPane.showMessageDialog(null, "Ya estan introducidos todos los modulos posibles del ciclo.");
-                    escribir_modulos.setText("");
-                    return;
-                }
-            } else {
 
-                for (int i = 0; i < lista_añadidos.getItemCount(); i++) {
-                    if (lista_añadidos.getItemAt(i).equalsIgnoreCase(escribir_modulos.getText())) {
-                        JOptionPane.showMessageDialog(null, "El modulo " + escribir_modulos.getText() + " ya esta introducido.");
-                        escribir_modulos.setText("");
-                        return;
-                    }
+        if (combobox_curso.getSelectedItem().equals(dam1)) {// si la eleccion del curso es dam1 entra
+            if (!(esModulo(escribir_modulos.getText(), modulos_dam1))) {//si no es un modulo contemplado en el arraylist fuera
+
+                return;
+            }
+
+            if (!lleno(modulos_dam1)) {//si el curso de dam1 no esta lleno entra
+                if (existeEnLista()) {//si existe lo que intenta introducir entra y le retorna 
+                    return;
                 }
             }
-        } else {
-            if (lista_añadidos.getItemCount() == modulos_dam2.size()) {
-                for (int i = 0; i < lista_añadidos.getItemCount(); i++) {
-                    for (int j = 0; j < lista_añadidos.getItemCount(); j++) {
-                        if (lista_añadidos.getItemAt(i).equalsIgnoreCase(modulos_dam2.get(j))) {
-                            contador++; //si encuentra un modulo en el comoboc que se llame igual en modulos_dam1 se suma al contador,
-                        }
-                    }
-                }
-                if (contador == lista_añadidos.getItemCount()) {//si el contador es igual que la longitud del combobox significa que ya estan todos los modulos
-                    JOptionPane.showMessageDialog(null, "Ya estan introducidos todos los modulos posibles del ciclo.");
-                    escribir_modulos.setText("");
-                    return;
-                }
-            } else {
+        } else {// si la eleccion del curso no es dam1 entra
+            if (!(esModulo(escribir_modulos.getText(), modulos_dam2))) {//si no es un modulo contemplado en el arraylist fuera
 
-                if (!(existe())) {
+                return;
+            }
+
+            if (!lleno(modulos_dam2)) {
+                if (existeEnLista()) {
                     return;
                 }
             }
 
         }
 
-        lista_añadidos.addItem(escribir_modulos.getText());
-        escribir_modulos.setText("");
+        lista_añadidos.addItem(escribir_modulos.getText().toUpperCase());//añade el item 
+        reseteartexto();
 
 
     }//GEN-LAST:event_boton_añadir_moduloActionPerformed
+    public void reseteartexto() {
+        escribir_modulos.setText("");//reseteamos el texto
+    }
 
-    public boolean existe() {
+    public boolean esModulo(String modulo, ArrayList<String> curso) {
+        for (String mod_curso : curso) {
+            if (modulo.equalsIgnoreCase(mod_curso)) {
+                return true;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "El modulo " + escribir_modulos.getText() + " no existe.");
+        reseteartexto();
+        return false;
+
+    }
+
+    public boolean existeEnLista() {
         for (int i = 0; i < lista_añadidos.getItemCount(); i++) {
             if (lista_añadidos.getItemAt(i).equalsIgnoreCase((escribir_modulos.getText()))) {
                 JOptionPane.showMessageDialog(null, "El modulo " + escribir_modulos.getText() + " ya esta introducido.");
                 escribir_modulos.setText("");
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
+    public boolean lleno(ArrayList<String> curso) {
+        if (lista_añadidos.getItemCount() == curso.size()) {
+
+            JOptionPane.showMessageDialog(null, "Ya estan introducidos todos los modulos posibles del ciclo.");
+            reseteartexto();
+
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     private void boton_agregar_todoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_agregar_todoActionPerformed
         if (combobox_curso.getSelectedItem().equals(dam1)) {

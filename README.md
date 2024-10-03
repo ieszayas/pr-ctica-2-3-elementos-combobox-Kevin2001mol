@@ -16,6 +16,7 @@ Crea una ventana que permita agregar elementos al listado de un *combobox* al da
 
 Mejorar el ejercicio anterior para que haya exista un botón **agregar todo** que agregue todos los módulos del curso y otro botón **borrar todo** del *combobox* anterior. 
 
+-- por hacer 
 Averigua la forma de cambiar el *Look and Feel* de la ventana por defecto al que utiliza el sistema Windows.
 
 
