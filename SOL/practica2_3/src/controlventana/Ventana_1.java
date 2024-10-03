@@ -210,11 +210,13 @@ public class Ventana_1 extends javax.swing.JFrame {
             }
 
         }
+        if (combobox_curso.getSelectedItem().equals(dam1)) {
+            lista_añadidos.addItem("DAM1: " + escribir_modulos.getText().toUpperCase());//añade el item 
+        } else {
+            lista_añadidos.addItem("DAM2: " + escribir_modulos.getText().toUpperCase());//añade el item 
 
-        lista_añadidos.addItem(escribir_modulos.getText().toUpperCase());//añade el item 
+        }
         reseteartexto();
-
-
     }//GEN-LAST:event_boton_añadir_moduloActionPerformed
     public void reseteartexto() {
         escribir_modulos.setText("");//reseteamos el texto
@@ -292,8 +294,15 @@ public class Ventana_1 extends javax.swing.JFrame {
     public void crear_todo(ArrayList<String> curso) {
 
         if (lista_añadidos.getItemCount() == 0) {
-            for (String modulo : curso) {
-                lista_añadidos.addItem(modulo);
+            if (combobox_curso.getSelectedItem().equals(dam1)) {
+                for (String modulo : curso) {
+                    lista_añadidos.addItem("DAM1: " + modulo);
+                }
+            } else {
+
+                for (String modulo : curso) {
+                    lista_añadidos.addItem("DAM2: " + modulo);
+                }
             }
         } else {
 
