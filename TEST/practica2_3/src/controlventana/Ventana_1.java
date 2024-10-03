@@ -88,7 +88,7 @@ public class Ventana_1 extends javax.swing.JFrame {
             }
         });
 
-        boton_borrar_seleccion.setText("Borrar");
+        boton_borrar_seleccion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/trash.png"))); // NOI18N
         boton_borrar_seleccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton_borrar_seleccionActionPerformed(evt);
@@ -112,17 +112,17 @@ public class Ventana_1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(combobox_curso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Panel_principalLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
+                        .addGap(24, 24, 24)
                         .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(boton_eliminar_todo)
                             .addComponent(boton_agregar_todo))))
                 .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(Panel_principalLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(38, 38, 38)
                 .addComponent(boton_añadir_modulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(boton_borrar_seleccion)
-                .addGap(101, 101, 101))
+                .addGap(118, 118, 118))
         );
         Panel_principalLayout.setVerticalGroup(
             Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,14 +136,17 @@ public class Ventana_1 extends javax.swing.JFrame {
                     .addComponent(lista_añadidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(escribir_modulos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boton_añadir_modulo)
-                    .addComponent(boton_borrar_seleccion))
-                .addGap(77, 77, 77)
-                .addComponent(boton_agregar_todo)
-                .addGap(18, 18, 18)
-                .addComponent(boton_eliminar_todo)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addGroup(Panel_principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_principalLayout.createSequentialGroup()
+                        .addComponent(boton_borrar_seleccion, javax.swing.GroupLayout.PREFERRED_SIZE, 31, Short.MAX_VALUE)
+                        .addGap(222, 222, 222))
+                    .addGroup(Panel_principalLayout.createSequentialGroup()
+                        .addComponent(boton_añadir_modulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(boton_agregar_todo)
+                        .addGap(37, 37, 37)
+                        .addComponent(boton_eliminar_todo)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
