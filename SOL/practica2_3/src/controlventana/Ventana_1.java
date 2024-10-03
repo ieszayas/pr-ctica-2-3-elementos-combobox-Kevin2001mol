@@ -2,6 +2,7 @@ package controlventana;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 public class Ventana_1 extends javax.swing.JFrame {
 
@@ -225,7 +226,30 @@ public class Ventana_1 extends javax.swing.JFrame {
                 return true;
             }
         }
-        JOptionPane.showMessageDialog(null, "El modulo " + escribir_modulos.getText() + " no existe.");
+        if (curso.contains("ENTORNOS DE DESARROLLO")) {
+            JOptionPane.showMessageDialog(null, """
+                                            El modulo que has introducido no existe.
+                                            Los modulos posibles a matricular son:
+                                            -ENTORNOS DE DESARROLLO
+                                            -LENGUAJE DE MARCAS
+                                            -PROGRAMACION
+                                            -BASE DE DATOS
+                                            -FOL
+                                            -SISTEMAS INFORMATICOS
+                                            """);
+        } else {
+            JOptionPane.showMessageDialog(null, """
+                                            El modulo que has introducido no existe.
+                                            Los modulos posibles a matricular son:
+                                            -EMPRESA
+                                            -ACCESO A DATOS
+                                            -INGLES
+                                            -SERVICIOS Y PROCESOS
+                                            -INTERFACES
+                                            -ANDROID
+                                            """);
+        }
+
         reseteartexto();
         return false;
 
@@ -296,8 +320,11 @@ public class Ventana_1 extends javax.swing.JFrame {
     }//GEN-LAST:event_combobox_cursoActionPerformed
 
     private void boton_borrar_seleccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_borrar_seleccionActionPerformed
-
-        lista_añadidos.removeItem(lista_añadidos.getSelectedItem());
+        if (lista_añadidos.getItemCount() == 0) {
+            JOptionPane.showMessageDialog(null, "La lista ya esta vacia.", "Error 578", JOptionPane.WARNING_MESSAGE);
+        } else {
+            lista_añadidos.removeItem(lista_añadidos.getSelectedItem());
+        }
     }//GEN-LAST:event_boton_borrar_seleccionActionPerformed
 
     public static void main(String args[]) {
@@ -305,6 +332,14 @@ public class Ventana_1 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Ventana_1().setVisible(true);
+                try {
+                    //UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+                    //UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+                    UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+                    //UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
